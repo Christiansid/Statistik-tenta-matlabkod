@@ -222,3 +222,19 @@ V = 4;
 %A Väntevärde
 Etot = n*E;
 %B Varians
+Vtot = n*V;
+%C MedelVänte
+Emedel = Etot/n;
+%D medel varians
+Vmedel = Vtot/n^2;
+%%
+% Man vill uppskatta andelen studenter med extraknäck. 
+% Av 117 slumpmässigt utvalda studenter sa 50 att de jobbade extra. Beräkna ett approximativt 90 
+% konfidensintervall för p=P(en student har extraknäck).
+% Ange svaret som A; B, där A och B motsvarar konfidensintervallets undre, 
+% respektive övre gräns. Svara med minst tre decimalers noggrannhet.
+
+%Antar binomianfördelat
+
+alpha = 0.10;
+[PHAT, PCI] = binofit(50,117, alpha); %Varför funkar inte binofit?
