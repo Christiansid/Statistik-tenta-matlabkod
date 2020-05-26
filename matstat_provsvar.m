@@ -1,13 +1,13 @@
 
 %%
-% I en vindkraftspark står två mindre vindkraftverk.
-% De fungerar oberoende av varandra och sannolikheten att de fungerar vid ett visst tillfälle är 24/25, respektive 99/100.
-% Beräkna sannolikheten att precis ett av det två kraftverken fungerar.
+% I en vindkraftspark stÃ¥r tvÃ¥ mindre vindkraftverk.
+% De fungerar oberoende av varandra och sannolikheten att de fungerar vid ett visst tillfÃ¤lle Ã¤r 24/25, respektive 99/100.
+% BerÃ¤kna sannolikheten att precis ett av det tvÃ¥ kraftverken fungerar.
 % Svara med minst tre decimalers noggrannhet.
 (24/25)*(1/100)+(1/25)*(99/100);
 %%
-% Slumpvariabeln X antar värdena 0, 1, 2 eller 3 med sannolikheterna 0.53, 0.06, 0.1 respektive 0.31.
-% Beräkna P(X > 1) och ange svaret med minst två decimalers noggrannhet.
+% Slumpvariabeln X antar vÃ¤rdena 0, 1, 2 eller 3 med sannolikheterna 0.53, 0.06, 0.1 respektive 0.31.
+% BerÃ¤kna P(X > 1) och ange svaret med minst tvÃ¥ decimalers noggrannhet.
 a=0;
 b=1;
 c=2;
@@ -18,11 +18,11 @@ cc=0.01;
 dd=0.09;
 answ=cc+dd
 %%
-% Blodsockerhalten brukar mätas två timmar efter intag av glukoslösning. 
-% Antag att detta 2-timmars-värde är normalfördelat med förväntat värde 5.42 mmol/l och standardavvikelse 1.23 mmol/l. 
-% Nedsatt glukostolerans är inte en sjukdom men innebär en kraftigt ökad risk för diabetes. 
-% Nedsatt glukostolerans brukas definieras som blodsockervärden mellan 7.8 och 11.0 mmol/l två timmar efter intag av glukoslösning.
-% Beräkna sannolikheten att en slumpmässigt vald person har nedsatt glukostolerans?
+% Blodsockerhalten brukar mÃ¤tas tvÃ¥ timmar efter intag av glukoslÃ¶sning. 
+% Antag att detta 2-timmars-vÃ¤rde Ã¤r normalfÃ¶rdelat med fÃ¶rvÃ¤ntat vÃ¤rde 5.42 mmol/l och standardavvikelse 1.23 mmol/l. 
+% Nedsatt glukostolerans Ã¤r inte en sjukdom men innebÃ¤r en kraftigt Ã¶kad risk fÃ¶r diabetes. 
+% Nedsatt glukostolerans brukas definieras som blodsockervÃ¤rden mellan 7.8 och 11.0 mmol/l tvÃ¥ timmar efter intag av glukoslÃ¶sning.
+% BerÃ¤kna sannolikheten att en slumpmÃ¤ssigt vald person har nedsatt glukostolerans?
 % Svara med minst tre decimalers noggrannhet.
 mu = 5.42;
 std = 1.23;
@@ -30,10 +30,10 @@ low=normcdf(7.8,mu,std);
 upper=normcdf(11,mu,std);
 answ1=upper-low;
 %%
-% Pers och Påls utgifter (enhet: kr) under en månad kan anses vara oberoende normalfördelade
-% slumpvariabler X med väntevärde 8300 och standardavvikelse 20 respektive Y med väntevärde 9400 och standardavvikelse 45.
-% Beräkna sannolikheten att deras sammanlagda utgifter överstiger 17795.
-% Svara med minst två decimalers noggrannhet.
+% Pers och PÃ¥ls utgifter (enhet: kr) under en mÃ¥nad kan anses vara oberoende normalfÃ¶rdelade
+% slumpvariabler X med vÃ¤ntevÃ¤rde 8300 och standardavvikelse 20 respektive Y med vÃ¤ntevÃ¤rde 9400 och standardavvikelse 45.
+% BerÃ¤kna sannolikheten att deras sammanlagda utgifter Ã¶verstiger 17795.
+% Svara med minst tvÃ¥ decimalers noggrannhet.
 permu=8300;
 perstd=20;
 paulmu=9400;
@@ -43,30 +43,30 @@ x=17795;
 totstd = sqrt(perstd^2 + paulstd^2);
 answ2=1-normcdf(x,totmu,totstd);
 %%
-% Medelvikten i ett stickprov bestående 
-% av 9 män var 86.67 kg med standardavvikelse 
-% 6.46 kg. Vad är "standard error of the mean",
-% d.v.s medelfelet för skattningen av förväntad 
-% medelvikt i populationen? Svara med minst två
+% Medelvikten i ett stickprov bestÃ¥ende 
+% av 9 mÃ¤n var 86.67 kg med standardavvikelse 
+% 6.46 kg. Vad Ã¤r "standard error of the mean",
+% d.v.s medelfelet fÃ¶r skattningen av fÃ¶rvÃ¤ntad 
+% medelvikt i populationen? Svara med minst tvÃ¥
 % decimalers noggrannhet.
 men=9;
 menmu=86.67;
 menstd=6.46;
 st_m_err=menstd/sqrt(men);
 %%
-% De tre observationerna 1.4, 0.85 och 0.58 anses vara hämtade från en
-% exponentialfördelning med täthetsfunktion f(x)=lambda*e^{-lambda*x}; x>=0.
-% Ange ML-skattningen för parametern \lambda?. Svara med minst tre decimalers noggrannhet.
+% De tre observationerna 1.4, 0.85 och 0.58 anses vara hÃ¤mtade frÃ¥n en
+% exponentialfÃ¶rdelning med tÃ¤thetsfunktion f(x)=lambda*e^{-lambda*x}; x>=0.
+% Ange ML-skattningen fÃ¶r parametern \lambda?. Svara med minst tre decimalers noggrannhet.
 obsvec = [1.4 0.85 0.58];
 n = 3;
 ML = n/sum(obsvec);
 %%
-% För at testa H_0 : mu = 2.8 mot H_1 : mu=/ 2.8 på nivå 5% i
-% en N(mu, std) skattas det okända std med
-% s = sqrt((1/(N-1))*sum(i->N)(x_i - x_hatt)^2) = 0.51 från 9 oberoende
-% mätningar. Nollhypotesen H_0 förkastas om x_hatt < k_1 där x_hatt är
-% medelvärdet av de 9 mätningarna. bestäm värdet på k_1 och k_2.
-% Svara med två decimaler.
+% FÃ¶r at testa H_0 : mu = 2.8 mot H_1 : mu=/ 2.8 pÃ¥ nivÃ¥ 5% i
+% en N(mu, std) skattas det okÃ¤nda std med
+% s = sqrt((1/(N-1))*sum(i->N)(x_i - x_hatt)^2) = 0.51 frÃ¥n 9 oberoende
+% mÃ¤tningar. Nollhypotesen H_0 fÃ¶rkastas om x_hatt < k_1 dÃ¤r x_hatt Ã¤r
+% medelvÃ¤rdet av de 9 mÃ¤tningarna. bestÃ¤m vÃ¤rdet pÃ¥ k_1 och k_2.
+% Svara med tvÃ¥ decimaler.
 s=0.51;
 n = 9;
 mu = 2.8;
@@ -76,82 +76,82 @@ k_1 = mu - t_value*st_mean_err;
 k_2 = mu + t_value*st_mean_err;
 
 %%
-% En biltillverkare säger i sin reklam att den genomsnittliga
-% bensinförbrukningen för en viss modell är högst \mu=0.7?=0.7 l/mil vid
-% blandad körning. En motororganisation misstänker att förbrukningen i
-% själva verket är högre och provkör under en längre tid nn slumpmässigt utvalda
-% bilar av modellen. Man antar att bränsleförbrukningen är normalfördelad med
-% väntevärde \mu? och standardavvikelse 0.20.2 och beslutar sig för att testa hypotesen
-% H_0 : mu <= 0.7 mot H_1 : mu > 0.7 på signifikansnivå 0.001. Antag att den sanna bränsleförbrukningen
-% i själva verket är 0.9. Hur många bilar ska motororganisationen provköra för att de, med sannolikheten minst
-% 0.9, ska upptäcka att biltillverkarens påstående är felaktigt?
-% Svara med ett heltal (avrunda uppåt).
+% En biltillverkare sÃ¤ger i sin reklam att den genomsnittliga
+% bensinfÃ¶rbrukningen fÃ¶r en viss modell Ã¤r hÃ¶gst \mu=0.7?=0.7 l/mil vid
+% blandad kÃ¶rning. En motororganisation misstÃ¤nker att fÃ¶rbrukningen i
+% sjÃ¤lva verket Ã¤r hÃ¶gre och provkÃ¶r under en lÃ¤ngre tid nn slumpmÃ¤ssigt utvalda
+% bilar av modellen. Man antar att brÃ¤nslefÃ¶rbrukningen Ã¤r normalfÃ¶rdelad med
+% vÃ¤ntevÃ¤rde \mu? och standardavvikelse 0.20.2 och beslutar sig fÃ¶r att testa hypotesen
+% H_0 : mu <= 0.7 mot H_1 : mu > 0.7 pÃ¥ signifikansnivÃ¥ 0.001. Antag att den sanna brÃ¤nslefÃ¶rbrukningen
+% i sjÃ¤lva verket Ã¤r 0.9. Hur mÃ¥nga bilar ska motororganisationen provkÃ¶ra fÃ¶r att de, med sannolikheten minst
+% 0.9, ska upptÃ¤cka att biltillverkarens pÃ¥stÃ¥ende Ã¤r felaktigt?
+% Svara med ett heltal (avrunda uppÃ¥t).
 mu = 0.7;
 std3 = 0.2; 
 p = 0.9;
 lambda = 3.0902;
 n3 = (lambda/mu)^2;
 %%
-% För en viss sjukdom vet man att sannolikheten att en obehandlad
-% patient blir frisk brukar vara 0.62. Man vill undersöka om en viss
-% behandling ökar sannolikheten att bli frisk och tänker därför undersöka 25 patienter.
-% Man bestämmer sig för att dra slutsatsen att sannolikheten att bli frisk ökar om
+% FÃ¶r en viss sjukdom vet man att sannolikheten att en obehandlad
+% patient blir frisk brukar vara 0.62. Man vill undersÃ¶ka om en viss
+% behandling Ã¶kar sannolikheten att bli frisk och tÃ¤nker dÃ¤rfÃ¶r undersÃ¶ka 25 patienter.
+% Man bestÃ¤mmer sig fÃ¶r att dra slutsatsen att sannolikheten att bli frisk Ã¶kar om
 % minst 21 av de 25 patienterna blir friska.
-% Antag att behandlingen har effekt på sannolikheten att bli frisk är 0.9.
-% Hur stor är chansen att man upptäcker att effekten ökar med detta test?
+% Antag att behandlingen har effekt pÃ¥ sannolikheten att bli frisk Ã¤r 0.9.
+% Hur stor Ã¤r chansen att man upptÃ¤cker att effekten Ã¶kar med detta test?
 % Svara med minst tre decimalers noggrannhet.
 p=0.9;
 n=17;
 k=21;
 binocdf(4,n,0.18)
 %%
-% För de 18 talparen (x1,y1),...,(x18,y18) ansätter man en enkel linjär
-% regressionsmodell: yi = B0 +B1*xi 0 ei, där ei är oberoende och
-% normalfördelade. I en analys beräknas följande 95% intervall:
+% FÃ¶r de 18 talparen (x1,y1),...,(x18,y18) ansÃ¤tter man en enkel linjÃ¤r
+% regressionsmodell: yi = B0 +B1*xi 0 ei, dÃ¤r ei Ã¤r oberoende och
+% normalfÃ¶rdelade. I en analys berÃ¤knas fÃ¶ljande 95% intervall:
 % I_B0 = (-0.28, 0.78), I_B1 = (-2.27, -1.19).
-% Avgör om påstående är sanna:
-% A: modellen yi = B0 + ei är att föredra
-% B: modellen yi = B1*xi + ei är att föredra
+% AvgÃ¶r om pÃ¥stÃ¥ende Ã¤r sanna:
+% A: modellen yi = B0 + ei Ã¤r att fÃ¶redra
+% B: modellen yi = B1*xi + ei Ã¤r att fÃ¶redra
 % C: Det finns en positiv korrelation mellan x och y
-% D: Från den skattade modellen ser vi att en ökning i xx med 10
-% enheter innebär att yy minskar i genomsnitt med 17.317.3 enheter.
+% D: FrÃ¥n den skattade modellen ser vi att en Ã¶kning i xx med 10
+% enheter innebÃ¤r att yy minskar i genomsnitt med 17.317.3 enheter.
 % Svar: 0, 1, 0, 1
 %%
-% Antalet julklappar som en slumpmässigt vald person
-% ur en viss population får är Poissonfördelat med väntevärde 3.4.
-% Beräkna sannolikheten att personen får minst 1 julklapp.
+% Antalet julklappar som en slumpmÃ¤ssigt vald person
+% ur en viss population fÃ¥r Ã¤r PoissonfÃ¶rdelat med vÃ¤ntevÃ¤rde 3.4.
+% BerÃ¤kna sannolikheten att personen fÃ¥r minst 1 julklapp.
 % Svara med minst tre decimalers noggrannhet.
 mu = 3.4;
 ans = 1-poisscdf(0, 3.4);
 %%
-% Slumpvariabeln X är normalfördelad med väntevärde -6.9 och standardavvikelse 2.3.
-% A: Beräkna P(X <= -8.602)
-% B: Beräkna P(X > -10.189)
-% C: Beräkna P(-10.189 < X <= -8.602)
-% Svara på formen A; B; C, där A är svaret på första frågan, B är svaret på andra frågan och C är svaret på tredje frågan. Svara med minst två decimalers noggrannhet.
+% Slumpvariabeln X Ã¤r normalfÃ¶rdelad med vÃ¤ntevÃ¤rde -6.9 och standardavvikelse 2.3.
+% A: BerÃ¤kna P(X <= -8.602)
+% B: BerÃ¤kna P(X > -10.189)
+% C: BerÃ¤kna P(-10.189 < X <= -8.602)
+% Svara pÃ¥ formen A; B; C, dÃ¤r A Ã¤r svaret pÃ¥ fÃ¶rsta frÃ¥gan, B Ã¤r svaret pÃ¥ andra frÃ¥gan och C Ã¤r svaret pÃ¥ tredje frÃ¥gan. Svara med minst tvÃ¥ decimalers noggrannhet.
 mu = -6.9;
 s=2.3;
 A = normcdf(-8.602,mu,s);
 B = 1-normcdf(-10.189,mu,s);
 C = A-(1-B);
 %%
-% Beräkna P(-1 <= Y <= 2) då Y=2X-2 och X är normalfördelad
-% med mu=0.5, std=1.5. Svara med minst två decimalers noggrannhet.
+% BerÃ¤kna P(-1 <= Y <= 2) dÃ¥ Y=2X-2 och X Ã¤r normalfÃ¶rdelad
+% med mu=0.5, std=1.5. Svara med minst tvÃ¥ decimalers noggrannhet.
 Y = 2*0.5 - 2;
 std = 2*1.5;
 ans = normcdf(-1, Y, std);
 ans2 = normcdf(2, Y, std);
 ansans = ans2-ans
 %%
-% Mätningar på avståndet till en ljusstark stjärna
-% beskrivs av en slumpvariabel med väntevärde
-% ? och standardavvikelse ?. Man gjorde mätningar med två instrument, I1 och I2 och
-% erhöll följande resultat: se matlab fig 1.
-% Efteråt insåg man att instrument I2 var felinställd med ett systematisk fel
-% ?. Standardavvikelsen för mätningar från detta instrument är fortfarande ?.
-% a) Uppskatta det systematiska felet ?. Svara med två decimaler.
-% b) Gör en skattning av ? som baseras på mätningar från båda instrumenten.
-% Svara med minst två decimalers noggrannhet.
+% MÃ¤tningar pÃ¥ avstÃ¥ndet till en ljusstark stjÃ¤rna
+% beskrivs av en slumpvariabel med vÃ¤ntevÃ¤rde
+% ? och standardavvikelse ?. Man gjorde mÃ¤tningar med tvÃ¥ instrument, I1 och I2 och
+% erhÃ¶ll fÃ¶ljande resultat: se matlab fig 1.
+% EfterÃ¥t insÃ¥g man att instrument I2 var felinstÃ¤lld med ett systematisk fel
+% ?. Standardavvikelsen fÃ¶r mÃ¤tningar frÃ¥n detta instrument Ã¤r fortfarande ?.
+% a) Uppskatta det systematiska felet ?. Svara med tvÃ¥ decimaler.
+% b) GÃ¶r en skattning av ? som baseras pÃ¥ mÃ¤tningar frÃ¥n bÃ¥da instrumenten.
+% Svara med minst tvÃ¥ decimalers noggrannhet.
 std1 = 0.32;
 mu1 = 9.21;
 n1 = 8;
@@ -161,12 +161,12 @@ n2 = 7;
 a = mu2-mu1
 b = (std1+std2)/2
 %%
-%Vi vill jämföra två olika mätmetoder A och B. Låt X vara resultatet av en
-% mätning med metod A och att X ? N(?_A,?) 
-% och Y en mätning med metod B där Y ? N(?_B,?).
-% Se figur 2 för värden.
-% Gör ett ensidigt, undre begränsat 99.9% konfidensintervall, för ?_B ? ?_A.
-% Svara med intervallets undre gräns och med minst två decimalers noggrannhet.
+%Vi vill jÃ¤mfÃ¶ra tvÃ¥ olika mÃ¤tmetoder A och B. LÃ¥t X vara resultatet av en
+% mÃ¤tning med metod A och att X ? N(?_A,?) 
+% och Y en mÃ¤tning med metod B dÃ¤r Y ? N(?_B,?).
+% Se figur 2 fÃ¶r vÃ¤rden.
+% GÃ¶r ett ensidigt, undre begrÃ¤nsat 99.9% konfidensintervall, fÃ¶r ?_B ? ?_A.
+% Svara med intervallets undre grÃ¤ns och med minst tvÃ¥ decimalers noggrannhet.
 
 lambda = 3.93;
 mu_a = 5.3;
@@ -179,10 +179,10 @@ mean_mu = (mu_a + mu_b)/2;
 std = sqrt(((n_a-1)*s_a^2 + (n_b-1)*s_b^2)/((n_a-1)+(n_b-1)));
 I = (mu_b-mu_a) - lambda*std*sqrt((1/n_a)+(1/n_b))
 %%
-% Willy studerar styrkefunktionen från testet H_0 : ? = 1.1, H_1 : ? < 1.1 
-% vilket baseras på 14 normalfördelade mätningar med standardavvikelse 1.
-% Testets signifikansnivå var 0.001. Vad är sannolikheten att inte upptäcka att H_0 
-% är falsk då ?= 0.3?
+% Willy studerar styrkefunktionen frÃ¥n testet H_0 : ? = 1.1, H_1 : ? < 1.1 
+% vilket baseras pÃ¥ 14 normalfÃ¶rdelade mÃ¤tningar med standardavvikelse 1.
+% Testets signifikansnivÃ¥ var 0.001. Vad Ã¤r sannolikheten att inte upptÃ¤cka att H_0 
+% Ã¤r falsk dÃ¥ ?= 0.3?
 % Svara med tre decimaler.
 mu = 1.1;
 std = 1;
@@ -192,11 +192,11 @@ mu1=0.3;
 I_low = mu - l*(std/sqrt(n));
 1-normcdf(I_low, mu1, std/sqrt(n));
 %%
-% Antalet olyckstillbud under en månad i en viss korsning anses oberoende och Poissonfördelade med väntevärde ?.
-% Gör ett approximativt 95% konfidensintervall för ? då man
-% (a) under en månad observerar 16 olyckstillbud
-% (b) under tre månader observerar 16, 24 respektive 21 olyckstillbud
-% Svara med minst två decimalers noggrannhet.
+% Antalet olyckstillbud under en mÃ¥nad i en viss korsning anses oberoende och PoissonfÃ¶rdelade med vÃ¤ntevÃ¤rde ?.
+% GÃ¶r ett approximativt 95% konfidensintervall fÃ¶r ? dÃ¥ man
+% (a) under en mÃ¥nad observerar 16 olyckstillbud
+% (b) under tre mÃ¥nader observerar 16, 24 respektive 21 olyckstillbud
+% Svara med minst tvÃ¥ decimalers noggrannhet.
 
 %A
 mf = sqrt(16);
@@ -210,14 +210,14 @@ m = mean(b);
 il = m - 1.96*(sqrt(m/3));
 iu = m + 1.96*(sqrt(m/3));
 %%
-% En husägare, som bor i en eluppvärmd villa, mäter under några
-% vinterveckor sambandet mellan veckans medeltemperatur (x, mätt i grader)
-% och den totala elförbrukningen (y, mätt i kW) under veckan. 
+% En husÃ¤gare, som bor i en eluppvÃ¤rmd villa, mÃ¤ter under nÃ¥gra
+% vinterveckor sambandet mellan veckans medeltemperatur (x, mÃ¤tt i grader)
+% och den totala elfÃ¶rbrukningen (y, mÃ¤tt i kW) under veckan. 
 % Han antar modellen y_i = B_0 + B_1*x_i + e_i,
-% där e_i är oberoende och N(0, ?). Från ett datorprogram får han bl.a. följande:
+% dÃ¤r e_i Ã¤r oberoende och N(0, ?). FrÃ¥n ett datorprogram fÃ¥r han bl.a. fÃ¶ljande:
 % I_?_0=(847.83,877.55), I_?_1=(?29.94,?34.94) och ?^*=26.67.
-% Ange en skattning av hur mycket mer el det går åt när medeltemperaturen sjunker en grad?
-% Svara med två decimaler.
+% Ange en skattning av hur mycket mer el det gÃ¥r Ã¥t nÃ¤r medeltemperaturen sjunker en grad?
+% Svara med tvÃ¥ decimaler.
 Ib0_l = 847.83;
 Ib0_u = 877.55;
 Ib1_l = -34.94;
@@ -231,46 +231,35 @@ yudiff = abs(yu-yu2);
 yldiff = yl2-yl;
 ans=(yudiff+yldiff)/2
 %%
-%Fem sidor av en symmetrisk tärning målas svarta och en målas vit.
-% Tärningen kastas sex gånger.
-% Vilken av följande alternativ är mest sannolikt?
-% A: Svarta sidan upp på fem av kasten och den vita sidan upp på ett av kasten
-% B: Svarta sidan upp på samtliga sex kast.
-% C: Båda alternativen är lika sannolika.
+%Fem sidor av en symmetrisk tÃ¤rning mÃ¥las svarta och en mÃ¥las vit.
+% TÃ¤rningen kastas sex gÃ¥nger.
+% Vilken av fÃ¶ljande alternativ Ã¤r mest sannolikt?
+% A: Svarta sidan upp pÃ¥ fem av kasten och den vita sidan upp pÃ¥ ett av kasten
+% B: Svarta sidan upp pÃ¥ samtliga sex kast.
+% C: BÃ¥da alternativen Ã¤r lika sannolika.
 % Svar: A
 %%
-% Slumpvariabeln X är rektangelfördelad (likformigt fördelad) i intervallet (3,4). Beräkna L_14,
-% d.v.s. variabelns 14:de percentil. Svara med minst två decimalers noggrannhet. Ledning:
+% Slumpvariabeln X Ã¤r rektangelfÃ¶rdelad (likformigt fÃ¶rdelad) i intervallet (3,4). BerÃ¤kna L_14,
+% d.v.s. variabelns 14:de percentil. Svara med minst tvÃ¥ decimalers noggrannhet. Ledning:
 % Percentilen L_p definieras av F(L_p)=p/100
 a = 3/4;
 14+a
 %%
 
-% Livslängden, X_i, för en viss typ av bakterie kan anses vara en slumpvariabel med både
-% väntevärde och standardavvikelse 31 (enhet: dagar). Vi studerar medelvärdet, Xhatt, av
-% livslängderna hos 330 sådana bakterier. Vi antar att livslängderna är oberoende av varandra.
-% A: Beräkna väntevärdet för medelvärdet Xhatt.
-% B: Beräkna variansen för medelvärdet Xhatt.
+% LivslÃ¤ngden, X_i, fÃ¶r en viss typ av bakterie kan anses vara en slumpvariabel med bÃ¥de
+% vÃ¤ntevÃ¤rde och standardavvikelse 31 (enhet: dagar). Vi studerar medelvÃ¤rdet, Xhatt, av
+% livslÃ¤ngderna hos 330 sÃ¥dana bakterier. Vi antar att livslÃ¤ngderna Ã¤r oberoende av varandra.
+% A: BerÃ¤kna vÃ¤ntevÃ¤rdet fÃ¶r medelvÃ¤rdet Xhatt.
+% B: BerÃ¤kna variansen fÃ¶r medelvÃ¤rdet Xhatt.
 % Svara med minst en decimals noggrannhet.
 A = 330/31;
 B = sqrt((31^2)/330);
 %%
-% Slumpvariabeln X är normalfördelad med väntevärde -4 och standardavvikelse 2.
-% Bestäm talet x så att P(X > x) = 0.001P(X>x)=0.001. Svara med minst en decimals noggrannhet.
+% Slumpvariabeln X Ã¤r normalfÃ¶rdelad med vÃ¤ntevÃ¤rde -4 och standardavvikelse 2.
+% BestÃ¤m talet x sÃ¥ att P(X > x) = 0.001P(X>x)=0.001. Svara med minst en decimals noggrannhet.
 mu=-4;
 s=2;
 p=0.001
 X = 1-p
 x = norminv(X,mu,s);
 %%
-lambda = 1.96;
-mu_a = 472.333;
-s_a = 50.6842;
-n_a = 6;
-mu_b = 448.667;
-s_b = 51.399;
-n_b = 6;
-mean_mu = (mu_a + mu_b)/2;
-std = sqrt(((n_a-1)*s_a^2 + (n_b-1)*s_b^2)/((n_a-1)+(n_b-1)));
-I_l = (mu_b-mu_a) - lambda*std*sqrt((1/n_a)+(1/n_b))
-I_u = (mu_b-mu_a) + lambda*std*sqrt((1/n_a)+(1/n_b))
