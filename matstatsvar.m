@@ -210,3 +210,4 @@ m = mean(b);
 il = m - 1.96*(s/sqrt(3))
 iu = m + 1.96*(s/sqrt(3))
 
+
