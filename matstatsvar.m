@@ -12,10 +12,10 @@ a=0;
 b=1;
 c=2;
 d=3;
-aa=0.67;
-bb=0.23;
-cc=0.01;
-dd=0.09;
+aa=0.25;
+bb=0.65;
+cc=0.04;
+dd=0.06;
 answ=cc+dd
 %%
 % Blodsockerhalten brukar mätas två timmar efter intag av glukoslösning. 
@@ -210,4 +210,15 @@ m = mean(b);
 il = m - 1.96*(s/sqrt(3))
 iu = m + 1.96*(s/sqrt(3))
 
-
+%%
+%Beräkna väntevärde och varians
+% Du gör 10 mätningar från en fördelning med väntevärde 5 och varians 4.
+% För summan av dina mätningar: A) Ange väntevärde, B) Ange varians
+% För medelvärdet av dina mätningar: C) Ange väntevärde, D) Ange varians
+% Svara om nödvändigt med minst två decimalers noggrannhet.
+n = 10;
+E = 5;
+V = 4;
+%A Väntevärde
+Etot = n*E;
+%B Varians
